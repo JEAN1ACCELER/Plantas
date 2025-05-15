@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Comunidade de Plantas Medicinais</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1><i class="fas fa-leaf"></i> Plantæ</h1>
+            <p>Comunidade colaborativa de plantas medicinais</p>
+        </div>
+    </header>
+
+    <nav>
+        <div class="container">
+            <ul>
+                <li><a href="#" id="home-link"><i class="fas fa-home"></i> Início</a></li>
+                <li><a href="#" id="add-plant-link"><i class="fas fa-plus"></i> Adicionar Planta</a></li>
+                <li><a href="#" id="search-link"><i class="fas fa-search"></i> Buscar</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="container">
+        <section id="plants-section">
+            <h2><i class="fas fa-seedling"></i> Plantas Recentes</h2>
+            <div id="plants-container" class="plants-grid">
+                <!-- Plantas serão carregadas aqui via JavaScript -->
+            </div>
+        </section>
+
+        <section id="add-plant-section" class="hidden">
+            <h2><i class="fas fa-plus-circle"></i> Adicionar Nova Planta</h2>
+            <form id="plant-form">
+                <div class="form-group">
+                    <label for="plant-name">Nome Popular:</label>
+                    <input type="text" id="plant-name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="scientific-name">Nome Científico:</label>
+                    <input type="text" id="scientific-name">
+                </div>
+
+                <div class="form-group">
+                    <label for="plant-description">Descrição e Usos:</label>
+                    <textarea id="plant-description" rows="5" required></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="plant-benefits">Benefícios Medicinais:</label>
+                    <textarea id="plant-benefits" rows="5" required></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="plant-preparation">Modo de Preparo:</label>
+                    <textarea id="plant-preparation" rows="3" required></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="plant-image">Imagem da Planta (URL):</label>
+                    <input type="url" id="plant-image" placeholder="https://exemplo.com/imagem.jpg">
+                </div>
+
+                <div class="form-group">
+                    <label for="plant-references">Referências Científicas (DOIs ou URLs):</label>
+                    <textarea id="plant-references" rows="3" placeholder="Ex: 10.1234/abc.2023, https://exemplo.com/artigo"></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="article-files">Anexar Artigos (PDFs):</label>
+                    <input type="file" id="article-files" multiple accept=".pdf,.doc,.docx">
+                </div>
+
+                <button type="submit" class="btn"><i class="fas fa-save"></i> Salvar Planta</button>
+            </form>
+        </section>
+
+        <section id="search-section" class="hidden">
+            <h2><i class="fas fa-search"></i> Buscar Plantas</h2>
+            <div class="search-box">
+                <input type="text" id="search-input" placeholder="Digite o nome da planta...">
+                <button id="search-btn" class="btn"><i class="fas fa-search"></i> Buscar</button>
+            </div>
+            <div id="search-results" class="plants-grid">
+                <!-- Resultados da busca aparecerão aqui -->
+            </div>
+        </section>
+
+        <section id="plant-detail-section" class="hidden">
+            <button id="back-btn" class="btn"><i class="fas fa-arrow-left"></i> Voltar</button>
+            <div id="plant-detail-container">
+                <!-- Detalhes da planta serão carregados aqui -->
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>- Todos os direitos reservados</p>
+            <p>Projeto acadêmico para compartilhamento de conhecimento sobre plantas medicinais</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
