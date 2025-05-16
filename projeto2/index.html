@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Conversor de Bases</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Conversor de Bases Numéricas</h1>
+    <div class="converter">
+      <input type="text" id="inputNumero" placeholder="Digite o número">
+      
+      <div class="selects">
+        <label for="baseOrigem">De:</label>
+        <select id="baseOrigem">
+          <option value="2">Binário</option>
+          <option value="8">Octal</option>
+          <option value="10" selected>Decimal</option>
+          <option value="16">Hexadecimal</option>
+        </select>
+
+        <label for="baseDestino">Para:</label>
+        <select id="baseDestino">
+          <option value="2" selected>Binário</option>
+          <option value="8">Octal</option>
+          <option value="10">Decimal</option>
+          <option value="16">Hexadecimal</option>
+        </select>
+      </div>
+
+      <button onclick="converter()">Converter</button>
+      <div id="resultado" class="resultado"></div>
+    </div>
+
+    <h2>Tabela Binário ↔ Hexadecimal (4 bits)</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Binário</th>
+          <th>Hexadecimal</th>
+        </tr>
+      </thead>
+      <tbody id="tabelaHex"></tbody>
+    </table>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
